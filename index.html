@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-title">Weather Dashboard</div>
+            <div class="header-icons">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="cityInput" placeholder="Search city..." autocomplete="off">
+                    <ul id="suggestions"></ul>
+                </div>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="icon-btn settings-btn">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="settings-dropdown">
+                        <div class="dropdown-header">Settings</div>
+                        <div class="dropdown-section">
+                            <div class="setting-item">
+                                <div class="setting-label">
+                                    <i class="fas fa-temperature-high"></i>
+                                    Temperature Unit
+                                </div>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="tempUnit" class="toggle-input">
+                                    <label for="tempUnit" class="toggle-label">
+                                        <span class="toggle-text" data-on="°F" data-off="°C"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-label">
+                                    <i class="fas fa-wind"></i>
+                                    Wind Speed Unit
+                                </div>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="windUnit" class="toggle-input">
+                                    <label for="windUnit" class="toggle-label">
+                                        <span class="toggle-text" data-on="mph" data-off="km/h"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="loadingDiv" class="loading" style="display: none;">
+            <i class="fas fa-spinner"></i>
+            <div style="font-size: 1.2rem; font-weight: 700;">Loading weather data...</div>
+        </div>
+        
+        <div id="errorDiv" class="error" style="display: none;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span></span>
+        </div>
+        
+        <div id="weatherContent">
+            <!-- Main Weather -->
+            <div class="main-weather">
+                <div class="weather-main">
+                    <div class="weather-icon" id="mainIcon">
+                    </div>
+                    <div class="main-temp-info">
+                        <div class="temperature" id="mainTemp">25°</div>
+                        <div class="condition" id="mainCondition">Sunny</div>
+                        <div class="location" id="locationText">
+                            <i class="fas fa-map-marker-alt"></i>
+                            London, UK
+                        </div>
+                    </div>
+                </div>
+                <div class="temp-details">
+                    <div class="temp-row labels">
+                        <span class="temp-label">
+                            <i class="fas fa-thermometer-quarter"></i>
+                            Min
+                        </span>
+                        <span class="temp-label">
+                            <i class="fas fa-thermometer-three-quarters"></i>
+                            Max
+                        </span>
+                    </div>
+                    <div class="temp-row">
+                        <span class="temp-value">
+                            <span class="arrow down"><i class="fas fa-arrow-down"></i></span>
+                            <span id="minTemp">18°</span>
+                        </span>
+                        <span class="temp-value">
+                            <span class="arrow up"><i class="fas fa-arrow-up"></i></span>
+                            <span id="maxTemp">28°</span>
+                        </span>
+                    </div>
+                    <div class="feels-like">
+                        <i class="fas fa-temperature-low"></i>
+                        Feels like <strong id="feelsLike">27°</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Weather Details -->
+            <div class="weather-details" id="weatherDetails">
+            </div>
+            
+            <!-- Hourly Forecast -->
+            <div class="section">
+                <div class="section-title">
+                    <i class="far fa-clock"></i>
+                    Hourly Forecast
+                </div>
+                <div class="hourly-scroll" id="hourlyForecast">
+                </div>
+            </div>
+            
+            <!-- Weekly Forecast -->
+            <div class="section">
+                <div class="section-title">
+                    <i class="far fa-calendar-alt"></i>
+                    7-Day Forecast
+                </div>
+                <div class="weekly-forecast" id="weeklyForecast">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
