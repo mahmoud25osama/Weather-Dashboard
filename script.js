@@ -379,5 +379,4 @@ function updateThemeIcon(isDarkMode) {
 // Initialize dark mode when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     initializeDarkMode();
-    // ... rest of your initialization code
 });
