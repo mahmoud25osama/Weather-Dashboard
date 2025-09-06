@@ -1,7 +1,7 @@
 const API_KEY = 'd6fba732d5da4e72a07215900250309'; // WeatherAPI key
-const API_BASE = 'http://api.weatherapi.com/v1';
+const API_BASE = 'https://api.weatherapi.com/v1';
 
-let currentCity = 'london';
+let currentCity = 'Catalonia';
 
 async function fetchSearch(query) {
     try {
