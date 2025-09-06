@@ -2,7 +2,7 @@
 
 A modern, responsive weather dashboard application with a beautiful glass-morphism design, featuring real-time weather data, forecasts, and customizable settings.
 
-![Weather Dashboard Preview](https://mahmoud25osama.github.io/Weather-Dashboard/)
+[Weather Dashboard Preview](https://mahmoud25osama.github.io/Weather-Dashboard/)
 
 ## Features
 
