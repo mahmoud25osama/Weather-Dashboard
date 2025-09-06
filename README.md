@@ -2,7 +2,7 @@
 
 A modern, responsive weather dashboard application with a beautiful glass-morphism design, featuring real-time weather data, forecasts, and customizable settings.
 
-![Weather Dashboard Preview](preview.png)
+![Weather Dashboard Preview](https://mahmoud25osama.github.io/Weather-Dashboard/)
 
 ## Features
 
@@ -102,15 +102,19 @@ weather-dashboard/
 
 Feel free to fork this repository and submit pull requests for any improvements.
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## Credits
 
 - Weather data provided by [WeatherAPI](https://www.weatherapi.com/)
 - Icons by [Font Awesome](https://fontawesome.com/)
 - Font by [Google Fonts](https://fonts.google.com/)
+
+
+##  Author
+
+**Mahmoud Osama**
+🔗 [GitHub Profile](https://github.com/mahmoud25osama)
+
 
 ---
 
